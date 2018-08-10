@@ -9,6 +9,7 @@ app = Flask(__name__,
             template_folder = "./dist")
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
+
 @app.route('/api/random')
 def random_number():
     response = {
