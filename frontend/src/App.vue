@@ -1,8 +1,7 @@
 <template>
   <div>
-
    <todo-list v-bind:todos="todos"></todo-list>
-   <create-todo v-on:add-todo="addTodo"></create-todo>
+   <create-todo v-on:add-todo="createTodo"></create-todo>
   </div>
 </template>
 
@@ -14,7 +13,7 @@ export default {
   name: 'app',
   components: {
     TodoList,
-     CreateTodo,
+    CreateTodo,
   },
   // data function avails data to the template
   data() {
@@ -41,7 +40,7 @@ export default {
 
   // App.vue
 methods: {
-    addTodo(title) {
+    createTodo(title) {
       this.todos.push({
         title,
         done: false,

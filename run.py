@@ -17,6 +17,7 @@ def random_number():
     }
     return jsonify(response)
 
+
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def catch_all(path):

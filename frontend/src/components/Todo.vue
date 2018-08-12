@@ -1,6 +1,6 @@
 <template>
   <div class='ui centered card'>
-    // Todo shown when we are not in editing mode.
+    <!--// Todo shown when we are not in editing mode.-->
     <div class="content" v-show="!isEditing">
       <div class='header'>
           {{ todo.title }}
@@ -12,13 +12,13 @@
           <span class='right floated edit icon' v-on:click="showForm">
           <i class='edit icon'></i>
         </span>
-        /* add the trash icon in below the edit icon in the template */
+        <!--/* add the trash icon in below the edit icon in the template */-->
         <span class='right floated trash icon' v-on:click="deleteTodo(todo)">
           <i class='trash icon'></i>
         </span>
       </div>
     </div>
-    // form is visible when we are in editing mode
+    <!--// form is visible when we are in editing mode-->
     <div class="content" v-show="isEditing">
       <div class='ui form'>
         <div class='field'>
@@ -65,7 +65,7 @@ export default {
         this.$emit('delete-todo', todo);
       },
 
-      completeTodo(todo) {
+    completeTodo(todo) {
         this.$emit('complete-todo', todo);
       },
   },
